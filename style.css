@@ -1,0 +1,58 @@
+/* body
+{
+    background-color: #fff;
+
+}
+.continer{
+    align-items: center;
+    background-color: rgb(189, 0, 0);
+}
+
+li
+{
+    height: 100px;
+}
+.ctnComment{
+    background-color: #000;
+} */
+ul
+{
+    width: 100%;
+}
+li
+{
+    width: 100%;
+    border-radius: 5px;
+    margin-left: -5%;
+    margin-top: 10px;
+    width: 100%;
+}
+.ctnComment{
+    text-align: center;
+}
+.ctnComment .comment{
+   padding-right: -100px;
+    height: 650px;
+
+    overflow: scroll;
+}
+.continer{
+    text-align: center;
+   
+}
+.DataInput{
+    margin: 0 auto;
+    background-color: bisque;
+
+    width: 100%;
+}
+.DataInput .mag{
+    padding-top: 10px;
+}
+.view{
+    margin-top: 10px;
+    display: inline-block;
+    
+   
+    width: 100%;
+}
