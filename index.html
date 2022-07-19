@@ -99,9 +99,15 @@
             if (FBLoaded) {
                 var postid = document.getElementById('postid').value;
                 ac = 'KEY CỦA PAGE';
+                
                 FB.getLoginStatus(function(response) {
                     if (response.status === 'connected') {
-                        alert(response.authResponse.accessToken);
+                       // alert(response.authResponse.accessToken);
+                        var source = new EventSource("https://streaming-graph.facebook.com/1170562370402884/live_comments?access_token="+response.authResponse.accessToken+"&comment_rate=one_per_two_seconds&fields=from{name,id},message");
+                        source.onmessage = function(event) {
+                        // Do something with event.message for example
+                        console.log(event.data);
+                        };
                     }
                 });
                
