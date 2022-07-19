@@ -15,7 +15,7 @@
                 appId: AppID,
                 cookie: true,
                 xfbml: true,
-                version: 'v2.7'
+                version: 'v12.0'
             });
             FBLoaded = true;
             // Kiểm tra trạng thái hiện tại
@@ -42,7 +42,7 @@
 
         // [3] Yêu cầu đăng nhập FB
         function RequestLoginFB() {
-            window.location = 'http://graph.facebook.com/oauth/authorize?client_id=' + AppID + '&scope=user_videos&redirect_uri=http://webcuatoi.com&response_type=token';
+            window.location = 'http://graph.facebook.com/oauth/authorize?client_id=' + AppID + '&scope=user_videos&redirect_uri=https://devbanh2k3.github.io/index.html&response_type=token';
             //FB.login(function (response) {
             //    // Sau khi đã hỏi người dùng xong
             //    FB.getLoginStatus(function (response) {
