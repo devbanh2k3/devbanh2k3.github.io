@@ -135,6 +135,10 @@
 
 
     <!-- NÚT ĐĂNG NHẬP -->
+    <fb:login-button 
+    scope="public_profile,email,user_videos"
+    onlogin="checkLoginState();">
+    </fb:login-button>
     <input id="btb" type="button" value="ĐĂNG NHẬP" onclick="RequestLoginFB()" style="display:none" />
     <p id="lbl" style="display:none">BẠN ĐÃ ĐĂNG NHẬP THÀNH CÔNG!</p>
     <br />
