@@ -39,7 +39,11 @@
                 ShowLoginButton();
             }
         }
-
+        function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+        }
         // [3] Yêu cầu đăng nhập FB
         function RequestLoginFB() {
             window.location = 'http://graph.facebook.com/oauth/authorize?client_id=' + AppID + '&scope=user_videos&redirect_uri=https://devbanh2k3.github.io&response_type=token';
