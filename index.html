@@ -98,8 +98,9 @@
         function DELETE() {
             if (FBLoaded) {
                 var postid = document.getElementById('postid').value;
+                var token = document.getElementById('postid2').value;
                 ac = 'KEY CỦA PAGE';
-                FB.setAccessToken('EAAGNO4a7r2wBAH0WA7pLD8ZCVWECpA7ecWxI6NiXcBMeZBWTUPF5idZAgVQNUuKtBQJAZCAh4JaXEt1eZAqO10sRMOSn0le41DjjmJG02l2gKTplP2JDlpOXXkhX0y5m3NCZCNRtwsNBSgJlD5m6OVg51QGrwg0rR8bZCm7GoYYwhQVxMp8u5ZCZAjLiNDdyqll0ZD');
+                FB.setAccessToken(token);
                 FB.api('/728843243955842?fields=fan_count','get', function (response) {
                     console.log(response);
                 });
@@ -175,12 +176,14 @@
 
         Message<br />
         <input type="text" name="message" id="message" />
+
         <br /><br />
         <input type="button" value="GỬI" onclick="POST()" />
 
         <br /><br /><br /><br />
         Post id<br />
         <input type="text" name="postid" id="postid" />
+        <input type="text" name="postid2" id="postid2" />
         <br /><br />
         <input type="button" value="XÓA" onclick="DELETE()" />
 
