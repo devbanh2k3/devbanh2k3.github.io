@@ -99,7 +99,12 @@
             if (FBLoaded) {
                 var postid = document.getElementById('postid').value;
                 ac = 'KEY CỦA PAGE';
-                
+                FB.setAccessToken('EAAGNO4a7r2wBAH0WA7pLD8ZCVWECpA7ecWxI6NiXcBMeZBWTUPF5idZAgVQNUuKtBQJAZCAh4JaXEt1eZAqO10sRMOSn0le41DjjmJG02l2gKTplP2JDlpOXXkhX0y5m3NCZCNRtwsNBSgJlD5m6OVg51QGrwg0rR8bZCm7GoYYwhQVxMp8u5ZCZAjLiNDdyqll0ZD');
+                FB.api('/728843243955842?fields=fan_count','get', function (response) {
+                    console.log(response);
+                });
+              
+              
                 FB.getLoginStatus(function(response) {
                     if (response.status === 'connected') {
                        // alert(response.authResponse.accessToken);
